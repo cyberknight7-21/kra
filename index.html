@@ -1,35 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <title>The Cyber Knights</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <head>
-    <link data-require="bootstrap@4.1.1" data-semver="4.1.1" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
-    
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <h1>Local Storage</h1>
-    <div id="container">
-      <form>
-        <div>
-          <label for="task_des">Description</label>
-          <input id="task_des" type="text" />
+<style>
+
+</style>
+</head>
+<body>
+<div id="navbar">
+  <a class="active" href="index.html">Home</a>
+  <a href="login.html">Login</a>
+  <a href="https://www.google.com">About Us</a>
+</div>
+<br>
+<br>
+
+
+  <img id="img2" src="head.gif" alt="dam" width="100" height="1000">
+  
+  
+  
+  
+  
+<br>
+
+
+<div class="container">
+  <h1>Water Resource Department</h1><br><br>
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary button2" data-toggle="modal" data-target="#myModal1" style="vertical-align:middle">
+   <span>WRD (  Total ) </span>
+  </button>
+  <br><br><br>
+ <a href="div1.html"><button type="button" class="btn btn-primary button"  style="vertical-align:middle" >
+   <span> <font color="white">Executive Director, Godavari Marathwada Irrigation Development Corporation <br>- Aurangabad(M Corp.)
+</font> </span>
+  </button> </a>
+    <a href="div2.html"><button type="button" class="btn btn-primary button"  style="vertical-align:middle" >
+   <span><font color="white"> Executive Director, Maharashtra Krishna Valley Development Corporation<br> - Pune(M Corp.)
+</font></span>
+  </button> </a>
+   <a href="div3.html"><button type="button" class="btn btn-primary button"  style="vertical-align:middle" >
+   <span> <font color="white"> Executive Director, Konkan Irrigation Development Corporation <br> Thane(M Corp.)
+</font></span> </a>
+  </button>
+   <a href="div4.html"> <button type="button" class="btn btn-primary button"  style="vertical-align:middle" >
+   <span><font color="white">Executive Director, Tapi Irrigation Development Corporation<br> - Jalgaon(M Corp.)
+</font> </span></a>
+  </button>
+   <a href="div5.html"> <button type="button" class="btn btn-primary button"  style="vertical-align:middle" >
+   <span> <font color="white"> Executive Director, Vidarbha Irrigation Development Corporation<br> - Nagpur(M Corp.)
+</font></span>
+  </button> </a>
+  <!-- The Modal -->
+  <div class="modal" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h1 class="modal-title"><font Color="black">Total ( WRD )</font></h1>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
-        <div>
-          <label for="task_state">State</label>
-          <input id="task_state" type="text" />
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul id="myUL">
+  <li><span class="caret">Column 1</span>
+    <ul class="nested">
+     
+      <li>Total :&nbsp;&nbsp; 100Cr </li>
+      <li><span class="caret">Achived :&nbsp;&nbsp; 60cr</span>
+        <ul class="nested">
+          <li>60 % Of completion </li>
+         
+          
+            
+        </ul>
+      </li>  
+    </ul>
+  </li>
+</ul>
+
+
+ <ul id="myUL">
+  <li><span class="caret">Column 2</span>
+    <ul class="nested">
+     
+      <li>Total</li>
+      <li><span class="caret">Achived</span>
+        <ul class="nested">
+          <li>% Of completion </li>
+         
+          
+            
+        </ul>
+      </li>  
+    </ul>
+  </li>
+</ul>
+
+
+
+<ul id="myUL">
+  <li><span class="caret">Column 3</span>
+    <ul class="nested">
+     
+      <li>Total</li>
+      <li><span class="caret">Achived</span>
+        <ul class="nested">
+          <li>% Of completion </li>
+         
+          
+            
+        </ul>
+      </li>  
+    </ul>
+  </li>
+</ul>
+
         </div>
-        <div>
-          <button id="save_task" type="button"> Save Task</button>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
-      </form>
+        
+      </div>
     </div>
-    <hr />
-    <div id="container">
-      <h2>Task List</h2>
-      <ul id="task_wrapper"></ul>
-    </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
+  
+</div><br><br><br><br>
+<script>
+
+//sticky
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+// tree viewport
+
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+</script>
+</body>
 </html>
