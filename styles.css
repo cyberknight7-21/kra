@@ -186,3 +186,33 @@ ul, #myUL {
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+
+.table__head{
+color: #FFF;
+font-weight: 700;
+background: #9b4085;
+background: -moz-linear-gradient(-45deg, #9b4085 0%, #608590 100%);
+background: -webkit-linear-gradient(-45deg, #9b4085 0%,#608590 100%);
+background: linear-gradient(135deg, #9b4085 0%,#608590 100%);
+white-space: nowrap;
+}
+.table-bordered td, .table-bordered th{
+border: 0px solid #FFF;
+}
+
+
+.winner__table{
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 567px) {
+
+    .winner__table{
+    font-size: 12px;
+    }
+    .coin {
+    width:15%;
+    margin-left:2px;
+    }
+}

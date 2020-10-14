@@ -1,3 +1,5 @@
+var email_id;
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -9,10 +11,11 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     if(user != null){
 
-      var email_id = user.email;
+       email_id = user.email;
       document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
 	  
-	  
+	  fetchData();
+ 
 	  
 
     }
@@ -47,50 +50,68 @@ function logout(){
   firebase.auth().signOut();
 }
 
-
+function fetchData(){
+ console.log(email_id)
 
   var tblUsers = document.getElementById('tbl_users_list');
-  var databaseRef = firebase.database().ref('users2/');
+ var databaseRef;
+ 
+  if(email_id == 'vikrant@gmail.com'){
+  
+	 databaseRef = firebase.database().ref('users2/');
+  }
+  else{
+	  databaseRef = firebase.database().ref('/div1/ce1/se2/');
+  }
+  
   var rowIndex = 1;
   
   databaseRef.once('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
    var childKey = childSnapshot.key;
    var childData = childSnapshot.val();
-   
+	
    var row = tblUsers.insertRow(rowIndex);
-   var cellId = row.insertCell(0);
-   var cellName = row.insertCell(1);
-   var cell = row.insertCell(2);
-   cellId.appendChild(document.createTextNode(childKey));
-   cellName.appendChild(document.createTextNode(childData.col1t));
-   cell.appendChild(document.createTextNode(childData.col1t2));
+   var id = row.insertCell(0);
+   var aiic = row.insertCell(1);
+   var aiictw = row.insertCell(2);
+   var aiicwa = row.insertCell(3);
+   var aiicp = row.insertCell(4);
+   
+   id.appendChild(document.createTextNode(childKey));
+   aiic.appendChild(document.createTextNode(childData.aiic));
+   aiictw.appendChild(document.createTextNode(childData.aiictw));
+   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
+   aiicp.appendChild(document.createTextNode(childData.aiicp));
    
    rowIndex = rowIndex + 1;
     });
   });
  
-  
+}
   function update_user(){
-   var col1t = document.getElementById('col1t').value;
-   var col1 = document.getElementById('col1').value;
-   var col1t2 = document.getElementById('col1t2').value;
-
+   var id = document.getElementById('id').value;
+   var aiic = document.getElementById('aiic').value;
+   var aiictw = document.getElementById('aiictw').value;
+var aiicwa = document.getElementById('aiicwa').value;
+var aiicp = document.getElementById('aiicp').value;
    var data = {
-    col1: col1,
-    col1t: col1t,
-	col1t2: col1t2
+    id: id,
+    aiic: aiic,
+	aiictw: aiictw,
+	aiicwa: aiicwa,
+	aiicp: aiicp
    }
    
    
    //update data
    var updates = {};
-   updates['/users2/' + col1] = data;
+   updates['/div1/ce1/se2/'+id] = data;
    firebase.database().ref().update(updates);
    
    alert('The user is updated successfully!');
    
-   reload_page();
+   
   }
   //delete user
   function delete_user(){

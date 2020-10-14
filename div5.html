@@ -9,8 +9,29 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
 
-
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    // Initialize Firebase
+    var firebaseConfig = {
+    apiKey: "AIzaSyAn4SHwDb3odEvsVCA5HImagwMAP8zOW9o",
+    authDomain: "charged-ridge-234713.firebaseapp.com",
+    databaseURL: "https://charged-ridge-234713.firebaseio.com",
+    projectId: "charged-ridge-234713",
+    storageBucket: "charged-ridge-234713.appspot.com",
+    messagingSenderId: "226231639060",
+    appId: "1:226231639060:web:62c6bd0fc22d57dcb79b01",
+    measurementId: "G-34WR5SVPMW"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  </script>
 <style>
 
 </style>
@@ -18,7 +39,7 @@
 <body>
 <div id="navbar">
   <a class="active" href="index.html">Home</a>
-  <a href="#">Login</a>
+  <a href="login.html">Login</a>
   <a href="https://www.google.com">About Us</a>
 </div>
 
@@ -83,59 +104,30 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-          <ul id="myUL">
-  <li><span class="caret">Column 1</span>
-    <ul class="nested">
-     
-      <li>Total :&nbsp;&nbsp; 100Cr </li>
-      <li><span class="caret">Achived :&nbsp;&nbsp; 60cr</span>
-        <ul class="nested">
-          <li>60 % Of completion </li>
-         
-          
             
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
-
-
- <ul id="myUL">
-  <li><span class="caret">Column 2</span>
-    <ul class="nested">
-     
-      <li>Total</li>
-      <li><span class="caret">Achived</span>
-        <ul class="nested">
-          <li>% Of completion </li>
-         
+  <div class="container">
+    <div class="table-responsive">
+    <table class="table table-bordered   table-striped" id="tbl_users_list" style="margin-top:100px">
+      <thead class="table__head">
+        <tr class="winner__table">
+          <th>ID.</th>
+          <th><i class="fa fa-user" aria-hidden="true"></i> Work</th>
+          <th><i class="fa fa-map-marker" aria-hidden="true"></i> Target</th>
+          <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Achived</th>
+          <th> <i class="fa fa-percent" aria-hidden="true"></i> percentage</th>
           
-            
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
-
-
-
-<ul id="myUL">
-  <li><span class="caret">Column 3</span>
-    <ul class="nested">
-     
-      <li>Total</li>
-      <li><span class="caret">Achived</span>
-        <ul class="nested">
-          <li>% Of completion </li>
-         
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="winner__table">
           
-            
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
+         
+        </tr>
+
+      </tbody>
+    </table>
+    </div>
+  </div>
 
         </div>
         
@@ -190,6 +182,36 @@ for (i = 0; i < toggler.length; i++) {
     this.classList.toggle("caret-down");
   });
 }
+
+
+
+
+var tblUsers = document.getElementById('tbl_users_list');
+var  databaseRef = firebase.database().ref('/div1/ce1/se1/');
+  var rowIndex = 1;
+  
+  databaseRef.once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+   var childKey = childSnapshot.key;
+   var childData = childSnapshot.val();
+	
+   var row = tblUsers.insertRow(rowIndex);
+   var id = row.insertCell(0);
+   var aiic = row.insertCell(1);
+   var aiictw = row.insertCell(2);
+   var aiicwa = row.insertCell(3);
+   var aiicp = row.insertCell(4);
+   
+   id.appendChild(document.createTextNode(childKey));
+   aiic.appendChild(document.createTextNode(childData.aiic));
+   aiictw.appendChild(document.createTextNode(childData.aiictw));
+   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
+   aiicp.appendChild(document.createTextNode(childData.aiicp));
+   
+   rowIndex = rowIndex + 1;
+    });
+  });
+ 
 </script>
 </body>
 </html>
