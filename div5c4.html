@@ -10,7 +10,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var firebaseConfig = {
+    apiKey: "AIzaSyAn4SHwDb3odEvsVCA5HImagwMAP8zOW9o",
+    authDomain: "charged-ridge-234713.firebaseapp.com",
+    databaseURL: "https://charged-ridge-234713.firebaseio.com",
+    projectId: "charged-ridge-234713",
+    storageBucket: "charged-ridge-234713.appspot.com",
+    messagingSenderId: "226231639060",
+    appId: "1:226231639060:web:62c6bd0fc22d57dcb79b01",
+    measurementId: "G-34WR5SVPMW"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  </script>
+  
 <style>
 
 </style>
@@ -29,7 +47,7 @@
 
 
 <div class="container">
-  <h1>Chief Engineer, Special Projects (SP), Water Resources Department - Amravati (M Corp.)
+  <h1>Chief Engineer, Special Projects (SP), Water Resources Department - Amravati  
 </h1><br><br>
 
 
@@ -37,7 +55,7 @@
 
   <!-- Button to Open the Modal -->
   <button type="button" class="btn btn-primary button2" data-toggle="modal" data-target="#myModal1" style="vertical-align:middle">
-   <span>Chief Engineer, Special Projects (SP), Water Resources Department - Amravati (M Corp.)<br>(Total)
+   <span>Chief Engineer, Special Projects (SP), Water Resources Department - Amravati  <br>(Total)
    </span>
   </button>
   
@@ -45,7 +63,7 @@
   
  
  <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal2" style="vertical-align:middle">
-   <span> <font color="white">Superintending Engineer, Amravati Irrigation Projects Circle - Amravati (M Corp.)
+   <span> <font color="white">Superintending Engineer, Amravati Irrigation Projects Circle - Amravati  
 
 
 </font> 
@@ -54,7 +72,7 @@
   
   
   <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal3" style="vertical-align:middle">
-   <span> <font color="white">Superintending Engineer, Washim Irrigation Circle - Washim (M Cl)
+   <span> <font color="white">Superintending Engineer, Washim Irrigation Circle - Washim  
 
 
 </font> 
@@ -63,7 +81,7 @@
   
   
  <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal4" style="vertical-align:middle">
-   <span> <font color="white">Superintending Engineer, Akola Irrigation Circle - Akola (M Corp.)
+   <span> <font color="white">Superintending Engineer, Akola Irrigation Circle - Akola  
 
 
 </font>  </span>
@@ -79,7 +97,7 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h5 class="modal-title"><font Color="black"> Chief Engineer, Special Projects (SP), Water Resources Department - Amravati (M Corp.)<br> {Total}</font></h5>
+          <h5 class="modal-title"><font Color="black"> Chief Engineer, Special Projects (SP), Water Resources Department - Amravati  <br> {Total}</font></h5>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
@@ -163,66 +181,36 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h5 class="modal-title"><font Color="black">Superintending Engineer, Amravati Irrigation Projects Circle - Amravati (M Corp.)
+          <h5 class="modal-title"><font Color="black">Superintending Engineer, Amravati Irrigation Projects Circle - Amravati  
 </font></h5>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
         <!-- Modal body -->
         <div class="modal-body">
-          <ul id="myUL">
-  <li><span class="caret">Column 1</span>
-    <ul class="nested">
-     
-      <li>Total :&nbsp;&nbsp; 100Cr </li>
-      <li><span class="caret">Achived :&nbsp;&nbsp; 60cr</span>
-        <ul class="nested">
-          <li>60 % Of completion </li>
-         
+         <div class="container">
+    <div class="table-responsive">
+    <table class="table table-bordered   table-striped" id="div5ce4se1" style="margin-top:100px">
+      <thead class="table__head">
+        <tr class="winner__table">
+          <th>ID.</th>
+          <th><i class="fa fa-user" aria-hidden="true"></i> Work</th>
+          <th><i class="fa fa-map-marker" aria-hidden="true"></i> Target</th>
+          <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Achived</th>
+          <th> <i class="fa fa-percent" aria-hidden="true"></i> percentage</th>
           
-            
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
-
-
- <ul id="myUL">
-  <li><span class="caret">Column 2</span>
-    <ul class="nested">
-     
-      <li>Total</li>
-      <li><span class="caret">Achived</span>
-        <ul class="nested">
-          <li>% Of completion </li>
-         
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="winner__table">
           
-            
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
-
-
-
-<ul id="myUL">
-  <li><span class="caret">Column 3</span>
-    <ul class="nested">
-     
-      <li>Total</li>
-      <li><span class="caret">Achived</span>
-        <ul class="nested">
-          <li>% Of completion </li>
          
-          
-            
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
+        </tr>
+
+      </tbody>
+    </table>
+    </div>
+  </div>
 
         </div>
         
@@ -249,7 +237,7 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h5 class="modal-title"><font Color="black">Superintending Engineer, Washim Irrigation Circle - Washim (M Cl)
+          <h5 class="modal-title"><font Color="black">Superintending Engineer, Washim Irrigation Circle - Washim  
 
 </font></h5>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -257,59 +245,29 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-          <ul id="myUL">
-  <li><span class="caret">Column 1</span>
-    <ul class="nested">
-     
-      <li>Total :&nbsp;&nbsp; 100Cr </li>
-      <li><span class="caret">Achived :&nbsp;&nbsp; 60cr</span>
-        <ul class="nested">
-          <li>60 % Of completion </li>
-         
+         <div class="container">
+    <div class="table-responsive">
+    <table class="table table-bordered   table-striped" id="div5ce4se2" style="margin-top:100px">
+      <thead class="table__head">
+        <tr class="winner__table">
+          <th>ID.</th>
+          <th><i class="fa fa-user" aria-hidden="true"></i> Work</th>
+          <th><i class="fa fa-map-marker" aria-hidden="true"></i> Target</th>
+          <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Achived</th>
+          <th> <i class="fa fa-percent" aria-hidden="true"></i> percentage</th>
           
-            
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
-
-
- <ul id="myUL">
-  <li><span class="caret">Column 2</span>
-    <ul class="nested">
-     
-      <li>Total</li>
-      <li><span class="caret">Achived</span>
-        <ul class="nested">
-          <li>% Of completion </li>
-         
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="winner__table">
           
-            
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
-
-
-
-<ul id="myUL">
-  <li><span class="caret">Column 3</span>
-    <ul class="nested">
-     
-      <li>Total</li>
-      <li><span class="caret">Achived</span>
-        <ul class="nested">
-          <li>% Of completion </li>
          
-          
-            
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
+        </tr>
+
+      </tbody>
+    </table>
+    </div>
+  </div>
 
         </div>
         
@@ -337,7 +295,7 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h5 class="modal-title"><font Color="black">Superintending Engineer, Akola Irrigation Circle - Akola (M Corp.)
+          <h5 class="modal-title"><font Color="black">Superintending Engineer, Akola Irrigation Circle - Akola  
 
 </font></h5>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -345,61 +303,32 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-          <ul id="myUL">
-  <li><span class="caret">Column 1</span>
-    <ul class="nested">
-     
-      <li>Total :&nbsp;&nbsp; 100Cr </li>
-      <li><span class="caret">Achived :&nbsp;&nbsp; 60cr</span>
-        <ul class="nested">
-          <li>60 % Of completion </li>
-         
+         <div class="container">
+    <div class="table-responsive">
+    <table class="table table-bordered   table-striped" id="div5ce4se3" style="margin-top:100px">
+      <thead class="table__head">
+        <tr class="winner__table">
+          <th>ID.</th>
+          <th><i class="fa fa-user" aria-hidden="true"></i> Work</th>
+          <th><i class="fa fa-map-marker" aria-hidden="true"></i> Target</th>
+          <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Achived</th>
+          <th> <i class="fa fa-percent" aria-hidden="true"></i> percentage</th>
           
-            
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
-
-
- <ul id="myUL">
-  <li><span class="caret">Column 2</span>
-    <ul class="nested">
-     
-      <li>Total</li>
-      <li><span class="caret">Achived</span>
-        <ul class="nested">
-          <li>% Of completion </li>
-         
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="winner__table">
           
-            
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
-
-
-
-<ul id="myUL">
-  <li><span class="caret">Column 3</span>
-    <ul class="nested">
-     
-      <li>Total</li>
-      <li><span class="caret">Achived</span>
-        <ul class="nested">
-          <li>% Of completion </li>
          
-          
-            
-        </ul>
-      </li>  
-    </ul>
-  </li>
-</ul>
+        </tr>
+
+      </tbody>
+    </table>
+    </div>
+  </div>
 
         </div>
+        
         
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -451,6 +380,97 @@ for (i = 0; i < toggler.length; i++) {
     this.classList.toggle("caret-down");
   });
 }
+
+
+
+
+
+
+
+
+var tblUsers = document.getElementById('div5ce4se1');
+var  databaseRef = firebase.database().ref('/div4/ce4/se1/');
+  
+  var rowIndex = 1;
+  databaseRef.once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+   var childKey = childSnapshot.key;
+   var childData = childSnapshot.val();
+	
+   var row = tblUsers.insertRow(rowIndex);
+   var id = row.insertCell(0);
+   var aiic = row.insertCell(1);
+   var aiictw = row.insertCell(2);
+   var aiicwa = row.insertCell(3);
+   var aiicp = row.insertCell(4);
+   
+   id.appendChild(document.createTextNode(childKey));
+   aiic.appendChild(document.createTextNode(childData.aiic));
+   aiictw.appendChild(document.createTextNode(childData.aiictw));
+   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
+   aiicp.appendChild(document.createTextNode(childData.aiicp));
+   
+   rowIndex = rowIndex + 1;
+    });
+  });
+  
+  
+  
+  
+  var tblUsers2 = document.getElementById('div5ce4se2');
+var  databaseRef2 = firebase.database().ref('/div5/ce4/se2/');
+  
+  var rowIndex2 = 1;
+  databaseRef2.once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+   var childKey = childSnapshot.key;
+   var childData = childSnapshot.val();
+	
+   var row = tblUsers2.insertRow(rowIndex2);
+   var id = row.insertCell(0);
+   var aiic = row.insertCell(1);
+   var aiictw = row.insertCell(2);
+   var aiicwa = row.insertCell(3);
+   var aiicp = row.insertCell(4);
+   
+   id.appendChild(document.createTextNode(childKey));
+   aiic.appendChild(document.createTextNode(childData.aiic));
+   aiictw.appendChild(document.createTextNode(childData.aiictw));
+   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
+   aiicp.appendChild(document.createTextNode(childData.aiicp));
+   
+   rowIndex2 = rowIndex2 + 1;
+    });
+  });
+  
+  
+    var tblUsers3 = document.getElementById('div5ce4se3');
+var  databaseRef3 = firebase.database().ref('/div5/ce4/se3/');
+  
+  var rowIndex3 = 1;
+  databaseRef3.once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+   var childKey = childSnapshot.key;
+   var childData = childSnapshot.val();
+	
+   var row = tblUsers3.insertRow(rowIndex3);
+   var id = row.insertCell(0);
+   var aiic = row.insertCell(1);
+   var aiictw = row.insertCell(2);
+   var aiicwa = row.insertCell(3);
+   var aiicp = row.insertCell(4);
+   
+   id.appendChild(document.createTextNode(childKey));
+   aiic.appendChild(document.createTextNode(childData.aiic));
+   aiictw.appendChild(document.createTextNode(childData.aiictw));
+   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
+   aiicp.appendChild(document.createTextNode(childData.aiicp));
+   
+   rowIndex3 = rowIndex3 + 1;
+    });
+  });
+  
+  
 </script>
 </body>
 </html>
