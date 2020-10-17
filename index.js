@@ -13,8 +13,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 
        email_id = user.email;
       document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
-	  
-	  fetchData();
+	  fetchUserDetail();
+
  
 	  
 
@@ -49,23 +49,32 @@ function login(){
 function logout(){
   firebase.auth().signOut();
 }
+ var userInfo;
+const fetchUserDetail = async function () {
 
+	var userDetails = firebase.database().ref('userDetails/');
+	userDetails.once('value', function(snapshot){
+		return  snapshot.forEach(user => {
+			if (email_id == user.val().email) {
+			userInfo ={
+				id: user.key,
+				email: user.val().email,
+				collection: user.val().collectionName
+			}
+			fetchData();
+			}
+		})
+		
+	});
+
+}
 function fetchData(){
- console.log(email_id)
-
+ console.log(userInfo)
   var tblUsers = document.getElementById('tbl_users_list');
  var databaseRef;
- 
-  if(email_id == 'vikrant@gmail.com'){
-  
-	 databaseRef = firebase.database().ref('users2/');
-  }
-  else{
-	  databaseRef = firebase.database().ref('/div1/ce1/se2/');
-  }
-  
+
   var rowIndex = 1;
-  
+	 databaseRef = firebase.database().ref(userInfo.collection+'/');  
   databaseRef.once('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
    var childKey = childSnapshot.key;
@@ -94,30 +103,30 @@ function fetchData(){
    var aiic = document.getElementById('aiic').value;
    var aiictw = document.getElementById('aiictw').value;
 var aiicwa = document.getElementById('aiicwa').value;
-var aiicp = document.getElementById('aiicp').value;
+var aiicpp = aiicwa / aiictw;
+var aiicp = aiicpp *100;
    var data = {
     id: id,
-    aiic: aiic,
-	aiictw: aiictw,
-	aiicwa: aiicwa,
-	aiicp: aiicp
+    aiic: aiic
    }
-   
+   console.log(data)
    
    //update data
    var updates = {};
-   updates['/div1/ce1/se2/'+id] = data;
+   updates[userInfo.collection + '/' + id] = data;
    firebase.database().ref().update(updates);
-   
+   var updates2 = {};
+   updates2[userInfo.collection + '/total'] = data;
+   firebase.database().ref().update(updates2);
    alert('The user is updated successfully!');
    
    
   }
   //delete user
   function delete_user(){
-   var col1 = document.getElementById('col1').value;
+   var id = document.getElementById('id').value;
   
-   firebase.database().ref().child('/users2/' + col1).remove();
+   firebase.database().ref().child(userInfo.collection + '/' + id).remove();
    alert('The user is deleted successfully!');
    reload_page();
   }
