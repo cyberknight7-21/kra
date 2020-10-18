@@ -11,11 +11,42 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-<style>
 
+<script>
+
+
+
+  //loader
+        document.onreadystatechange = function() { 
+            if (document.readyState !== "complete") { 
+                document.querySelector( 
+                  "body").style.visibility = "hidden"; 
+                document.querySelector( 
+                  "#loader").style.visibility = "visible"; 
+            } else { 
+                document.querySelector( 
+                  "#loader").style.display = "none"; 
+                document.querySelector( 
+                  "body").style.visibility = "visible"; 
+            } 
+        }; 
+		</script>
+<style>
+ 
 </style>
 </head>
 <body>
+
+
+<div id="loader" class="center">
+<div class="spinner">
+  <div class="cube1"></div>
+  <div class="cube2"></div>
+</div>
+</div> 
+
+
+
 <div id="navbar">
   <a class="active" href="index.html">Home</a>
   <a href="login.html">Login</a>
@@ -75,6 +106,9 @@
         <!-- Modal body -->
         <div class="modal-body">
           
+ 
+ 
+
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -134,6 +168,10 @@ for (i = 0; i < toggler.length; i++) {
     this.classList.toggle("caret-down");
   });
 }
+
+
+
+    
 </script>
 </body>
 </html>
