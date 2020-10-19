@@ -27,7 +27,7 @@
 
 
 <div class="container">
-  <h1>Chief Engineer, Water Resources Department - Amravati  
+  <h1>CE, WRD- Amravati  
 </h1><br><br>
 
 
@@ -35,7 +35,7 @@
 
   <!-- Button to Open the Modal -->
   <button type="button" class="btn btn-primary button2" data-toggle="modal" data-target="#myModal1" style="vertical-align:middle">
-   <span>Chief Engineer, Water Resources Department - Amravati  <br>(Total)
+   <span>CE, WRD- Amravati  (Total)
    </span>
   </button>
   
@@ -43,7 +43,7 @@
   
  
  <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal2" style="vertical-align:middle">
-   <span> <font color="white">Superintending Engineer, Yavatmal Irrigation Project Circle - Yavatmal  
+   <span> <font color="white">SE, YIPC- Yavatmal  
 
 
 </font> 
@@ -52,7 +52,7 @@
   
   
   <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal3" style="vertical-align:middle">
-   <span> <font color="white">Superintending Engineer, Yavatmal Irrigation Circle - Yavatmal  
+   <span> <font color="white">SE, YIC- Yavatmal  
 
 
 </font> 
@@ -61,14 +61,14 @@
   
   
  <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal4" style="vertical-align:middle">
-   <span> <font color="white"> Superintending Engineer, Upper Wardha Irrigation Circle - Amravati  
+   <span> <font color="white"> SE, UWIC- Amravati  
 
 
 </font>  </span>
   </button>
   
    <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal5" style="vertical-align:middle">
-   <span> <font color="white">Superintending Engineer, Buldana Irrigation Project Circle - Buldana  
+   <span> <font color="white">SE, BIPC- Buldana  
 
 
 
@@ -364,135 +364,7 @@ function myFunction() {
   }
 }
 
-// tree viewport
 
-var toggler = document.getElementsByClassName("caret");
-var i;
-
-for (i = 0; i < toggler.length; i++) {
-  toggler[i].addEventListener("click", function() {
-    this.parentElement.querySelector(".nested").classList.toggle("active");
-    this.classList.toggle("caret-down");
-  });
-}
-
-
-
-
-var tblUsers = document.getElementById('div5ce3se1');
-var  databaseRef = firebase.database().ref('/div5/ce3/se1/');
-  
-  var rowIndex = 1;
-  databaseRef.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers.insertRow(rowIndex);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex = rowIndex + 1;
-    });
-  });
-  
-  
-  
-  
-  var tblUsers2 = document.getElementById('div5ce3se2');
-var  databaseRef2 = firebase.database().ref('/div5/ce3/se2/');
-  
-  var rowIndex2 = 1;
-  databaseRef2.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers2.insertRow(rowIndex2);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex2 = rowIndex2 + 1;
-    });
-  });
-  
-  
-    var tblUsers3 = document.getElementById('div5ce3se3');
-var  databaseRef3 = firebase.database().ref('/div5/ce3/se3/');
-  
-  var rowIndex3 = 1;
-  databaseRef3.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers3.insertRow(rowIndex3);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex3 = rowIndex3 + 1;
-    });
-  });
-  
-  
-  
-  
-  
-  var tblUsers4 = document.getElementById('div5ce3se4');
-var  databaseRef4 = firebase.database().ref('/div5/ce3/se4/');
-  
-  var rowIndex4 = 1;
-  databaseRef4.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers4.insertRow(rowIndex4);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex4 = rowIndex4 + 1;
-    });
-  });
-  
-  
-  
   
   
 </script>

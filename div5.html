@@ -9,32 +9,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
+
 
   
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script>
-    // Initialize Firebase
-    var firebaseConfig = {
-    apiKey: "AIzaSyAn4SHwDb3odEvsVCA5HImagwMAP8zOW9o",
-    authDomain: "charged-ridge-234713.firebaseapp.com",
-    databaseURL: "https://charged-ridge-234713.firebaseio.com",
-    projectId: "charged-ridge-234713",
-    storageBucket: "charged-ridge-234713.appspot.com",
-    messagingSenderId: "226231639060",
-    appId: "1:226231639060:web:62c6bd0fc22d57dcb79b01",
-    measurementId: "G-34WR5SVPMW"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  </script>
-<style>
 
-</style>
 </head>
 <body>
 <div id="navbar">
@@ -53,17 +33,17 @@
 <br>
 <br>
 
-  <h1>Executive Director, Vidarbha Irrigation Development Corporation<br>-Nagpur 
+  <h1>ED, VIDC -Nagpur 
 </h1><br><br>
   <!-- Button to Open the Modal -->
   <button type="button" class="btn btn-primary button2" data-toggle="modal" data-target="#myModal1" style="vertical-align:middle">
-   <span>Executive Director, Vidarbha Irrigation Development Corporation<br> - Nagpur <br>(Total) </span>
+   <span>ED, VIDC -Nagpur (Total) </span>
   </button>
   
   
 <a href="div5c1.html"> 
 <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal2" style="vertical-align:middle">
-   <span><font color="white">Chief Engineer, Gosikhurd Project, Water Resources Department - Nagpur  </font> 
+   <span><font color="white">CE, GP, WRD -Nagpur  </font> 
 
 </span>
   </button> 
@@ -71,7 +51,7 @@
   
   
  <a href="div5c2.html"> <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal" style="vertical-align:middle">
-   <span><font color="white">Chief Engineer, Water Resources Department - Nagpur  </font> 
+   <span><font color="white">CE, WRD -Nagpur  </font> 
  </span>
   </button>
   </a>
@@ -79,14 +59,14 @@
   
   <a href="div5c3.html">
   <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal3" style="vertical-align:middle">
-   <span><font color="white">Chief Engineer, Water Resources Department - Amravati  </font>
+   <span><font color="white">CE, WRD -Amravati  </font>
 </span>
   </button> </a>
   
   
   <a href="div5c4.html">
   <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal3" style="vertical-align:middle">
-   <span><font color="white">Chief Engineer, Special Projects (SP), Water Resources Department - Amravati  </font>
+   <span><font color="white">CE, SP, WRD -Amravati  </font>
 
 </span>
   </button> </a>
@@ -158,47 +138,7 @@ function myFunction() {
   }
 }
 
-// tree viewport
 
-var toggler = document.getElementsByClassName("caret");
-var i;
-
-for (i = 0; i < toggler.length; i++) {
-  toggler[i].addEventListener("click", function() {
-    this.parentElement.querySelector(".nested").classList.toggle("active");
-    this.classList.toggle("caret-down");
-  });
-}
-
-
-
-
-var tblUsers = document.getElementById('tbl_users_list');
-var  databaseRef = firebase.database().ref('/div1/ce1/se1/');
-  var rowIndex = 1;
-  
-  databaseRef.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers.insertRow(rowIndex);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex = rowIndex + 1;
-    });
-  });
- 
 </script>
 </body>
 </html>

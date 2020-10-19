@@ -28,7 +28,7 @@
 
 
 <div class="container">
-  <h1>Chief Engineer, Tapi Irrigation Development Corporation<br> - Jalgaon 
+  <h1>CE, TIDC - Jalgaon 
 </h1><br><br>
 
 
@@ -36,7 +36,7 @@
 
   <!-- Button to Open the Modal -->
   <button type="button" class="btn btn-primary button2" data-toggle="modal" data-target="#myModal1" style="vertical-align:middle">
-   <span>Chief Engineer, Tapi Irrigation Development Corporation - Jalgaon <br>(Total)
+   <span>CE, TIDC - Jalgaon (Total)
    </span>
   </button>
   
@@ -44,7 +44,7 @@
   
  
  <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal2" style="vertical-align:middle">
-   <span> <font color="white">Superintending Engineer, Dhule Irrigation Project Circle - Dhule  
+   <span> <font color="white">SE, DIPC - Dhule  
 
 </font> 
 </span>
@@ -52,7 +52,7 @@
   
   
   <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal3" style="vertical-align:middle">
-   <span> <font color="white">Superintending Engineer, Jalgaon Irrigation Project Circle - Jalgaon  
+   <span> <font color="white">SE,JIPC - Jalgaon  
 
 </font> 
  </span>
@@ -60,7 +60,7 @@
   
   
  <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#myModal4" style="vertical-align:middle">
-   <span> <font color="white">Superintending Engineer & Administrator, Command Area Development Authority - Jalgaon  
+   <span> <font color="white">SE & A ,CADA - Jalgaon  
 
 </font>  </span>
   </button>
@@ -286,106 +286,6 @@ function myFunction() {
   }
 }
 
-// tree viewport
-
-var toggler = document.getElementsByClassName("caret");
-var i;
-
-for (i = 0; i < toggler.length; i++) {
-  toggler[i].addEventListener("click", function() {
-    this.parentElement.querySelector(".nested").classList.toggle("active");
-    this.classList.toggle("caret-down");
-  });
-}
-
-
-
-
-
-var tblUsers = document.getElementById('div4ce1se1');
-var  databaseRef = firebase.database().ref('/div4/ce1/se1/');
-  
-  var rowIndex = 1;
-  databaseRef.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers.insertRow(rowIndex);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex = rowIndex + 1;
-    });
-  });
-  
-  
-  
-  
-  var tblUsers2 = document.getElementById('div4ce1se2');
-var  databaseRef2 = firebase.database().ref('/div4/ce1/se2/');
-  
-  var rowIndex2 = 1;
-  databaseRef2.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers2.insertRow(rowIndex2);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex2 = rowIndex2 + 1;
-    });
-  });
-  
-  
-    var tblUsers3 = document.getElementById('div4ce1se3');
-var  databaseRef3 = firebase.database().ref('/div4/ce1/se3/');
-  
-  var rowIndex3 = 1;
-  databaseRef3.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers3.insertRow(rowIndex3);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex3 = rowIndex3 + 1;
-    });
-  });
-  
-  
-  
   
 </script>
 </body>
