@@ -10,23 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var firebaseConfig = {
-    apiKey: "AIzaSyAn4SHwDb3odEvsVCA5HImagwMAP8zOW9o",
-    authDomain: "charged-ridge-234713.firebaseapp.com",
-    databaseURL: "https://charged-ridge-234713.firebaseio.com",
-    projectId: "charged-ridge-234713",
-    storageBucket: "charged-ridge-234713.appspot.com",
-    messagingSenderId: "226231639060",
-    appId: "1:226231639060:web:62c6bd0fc22d57dcb79b01",
-    measurementId: "G-34WR5SVPMW"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  </script>
+
 
 <style>
 
@@ -164,7 +148,15 @@
   </div>
 
         </div>
-        
+		
+        <a href="https://docs.google.com/spreadsheets/d/1VEYeOKqWjybFDDrgg1BKfB5XSTQaIhaIZWP197JpMwc/export?format=xlsx&gid=1398629774">   <button type="button" class="btn btn-primary buttond" data-toggle="modal" data-target="#myModal1" style="vertical-align:left">
+   <span> Download Report
+   </span>
+  </button></a>
+  
+  
+  
+  
         <!-- Modal footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -207,6 +199,15 @@
   </div>
 
         </div>
+		
+		
+		
+		 <a href="https://docs.google.com/spreadsheets/d/1VEYeOKqWjybFDDrgg1BKfB5XSTQaIhaIZWP197JpMwc/export?format=xlsx&gid=712817964">   <button type="button" class="btn btn-primary buttond" data-toggle="modal" data-target="#myModal1" style="vertical-align:left">
+   <span> Download Report
+   </span>
+  </button></a>
+  
+  
         
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -252,6 +253,17 @@
   </div>
 
         </div>
+		
+		
+		
+			
+		
+		 <a href="https://docs.google.com/spreadsheets/d/1VEYeOKqWjybFDDrgg1BKfB5XSTQaIhaIZWP197JpMwc/export?format=xlsx&gid=151296992">   <button type="button" class="btn btn-primary buttond" data-toggle="modal" data-target="#myModal1" style="vertical-align:left">
+   <span> Download Report
+   </span>
+  </button></a>
+  
+  
         
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -299,6 +311,16 @@
   
   </div>
   </div>
+  
+  
+  
+		 <a href="https://docs.google.com/spreadsheets/d/1VEYeOKqWjybFDDrgg1BKfB5XSTQaIhaIZWP197JpMwc/export?format=xlsx&gid=53913664">   <button type="button" class="btn btn-primary buttond" data-toggle="modal" data-target="#myModal1" style="vertical-align:left">
+   <span> Download Report
+   </span>
+  </button></a>
+  
+  
+  
         
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -348,6 +370,17 @@
   </div>
   </div>
         
+		
+		
+  
+		 <a href="https://docs.google.com/spreadsheets/d/1VEYeOKqWjybFDDrgg1BKfB5XSTQaIhaIZWP197JpMwc/export?format=xlsx&gid=128691483">   <button type="button" class="btn btn-primary buttond" data-toggle="modal" data-target="#myModal1" style="vertical-align:left">
+   <span> Download Report
+   </span>
+  </button></a>
+  
+  
+  
+  
         <!-- Modal footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -385,163 +418,7 @@ function myFunction() {
   }
 }
 
-// tree viewport
 
-var toggler = document.getElementsByClassName("caret");
-var i;
-
-for (i = 0; i < toggler.length; i++) {
-  toggler[i].addEventListener("click", function() {
-    this.parentElement.querySelector(".nested").classList.toggle("active");
-    this.classList.toggle("caret-down");
-  });
-}
-
-
-
-
-
-var tblUsers = document.getElementById('div2ce1se1');
-var  databaseRef = firebase.database().ref('/div12/ce1/se1/');
-  
-  var rowIndex = 1;
-  databaseRef.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers.insertRow(rowIndex);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex = rowIndex + 1;
-    });
-  });
-  
-  
-  
-  
-  var tblUsers2 = document.getElementById('div2ce1se2');
-var  databaseRef2 = firebase.database().ref('/div2/ce1/se2/');
-  
-  var rowIndex2 = 1;
-  databaseRef2.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers2.insertRow(rowIndex2);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex2 = rowIndex2 + 1;
-    });
-  });
-  
-  
-    var tblUsers3 = document.getElementById('div2ce1se3');
-var  databaseRef3 = firebase.database().ref('/div2/ce1/se3/');
-  
-  var rowIndex3 = 1;
-  databaseRef3.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers3.insertRow(rowIndex3);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex3 = rowIndex3 + 1;
-    });
-  });
-  
-  
-  
-  
-  
-  var tblUsers4 = document.getElementById('div2ce1se4');
-var  databaseRef4 = firebase.database().ref('/div2/ce1/se4/');
-  
-  var rowIndex4 = 1;
-  databaseRef4.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers4.insertRow(rowIndex4);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex4 = rowIndex4 + 1;
-    });
-  });
-  
-  
-  
-  
-  var tblUsers5 = document.getElementById('div2ce1se5');
-var  databaseRef5 = firebase.database().ref('/div2/ce1/se5/');
-  
-  var rowIndex5 = 1;
-  databaseRef5.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers5.insertRow(rowIndex5);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex5 = rowIndex5 + 1;
-    });
-  });
-  
   
   
 </script>
