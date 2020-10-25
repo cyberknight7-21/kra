@@ -25,19 +25,63 @@
 </style>
 </head>
 <body>
-<h1>Superintending Engineer, Osmanabad Irrigation Circle - Osmanabad </h1>
-  <br><br><br><br><br>
-   <iframe src="
-     https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnudxp-9Y0RE0CHXxwljskVnIYv5euGr5Y5LK9a9XJn63-L4c5NWpc9bLIDik2dHYO8w
-     " 
-     width="380" height="550" frameborder="50" marginheight="100" marginwidth="0">Loading…</iframe>
-      <br><br><br><h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
-     <br><br><br>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScDTEOnE8tvH5aJDrYbXVTW3tYiTRoU6UcIUb87TMuV7jx1mw/viewform?embedded=true" width="380" height="548" frameborder="100" marginheight="0" marginwidth="0">Loading…</iframe>
+<div id="navbar">
+  <a class="active" href="index.html">Home</a>
+  <a href="https://script.google.com/macros/s/AKfycby2cGdiSBkY4_NxbLo50oN4_sZVSViKLqI9b1Naugun6DhMFjfa/exec">Login</a>
+  <a href="https://www.google.com">About Us</a>
+</div>
+
   
-<iframe src="https://drive.google.com/embeddedfolderview?id=1O5E1d6BkJKSxBto5BwIz7vgmJTSrxNF_#grid" width="800" height="600" frameborder="0"></iframe></p>
+  
+  
+<br>
 
 
+<div class="container">
+  <h1>K.R.A Data Update 
+</h1><br><br>
+  
+  <input type="button" class="btn btn-primary button2 center"value="Click To Login" onClick="passWord()">
+  
+  
+  
+  
+<script>
+
+//sticky
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+// password
+function passWord() {
+var testV = 1;
+var pass1 = prompt('Please Enter Your Password',' ');
+while (testV < 3) {
+if (!pass1)
+history.go(-1);
+if (pass1.toLowerCase() == "letmein") {
+alert('Password correct!!!');
+window.open('protectpage.html');
+break;
+}
+testV+=1;
+var pass1 =
+prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+}
+if (pass1.toLowerCase()!="password" & testV ==3)
+history.go(-1);
+return " ";
+}
+</script>
 </body>
 </html>

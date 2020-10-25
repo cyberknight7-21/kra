@@ -18,7 +18,7 @@
 <body>
 <div id="navbar">
   <a class="active" href="index.html">Home</a>
-  <a href="login.html">Login</a>
+  <a href="https://script.google.com/macros/s/AKfycby2cGdiSBkY4_NxbLo50oN4_sZVSViKLqI9b1Naugun6DhMFjfa/exec">Login</a>
   <a href="https://www.google.com">About Us</a>
 </div>
 
@@ -239,67 +239,7 @@ function myFunction() {
   }
 }
 
-// tree viewport
 
-
-
-
-
-
-var tblUsers = document.getElementById('div1ce2se1');
-var  databaseRef = firebase.database().ref('/div1/ce2/se1/');
-  
-  var rowIndex = 1;
-  databaseRef.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers.insertRow(rowIndex);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex = rowIndex + 1;
-    });
-  });
-  
-  
-  
-  
-  var tblUsers2 = document.getElementById('div1ce2se2');
-var  databaseRef2 = firebase.database().ref('/div1/ce2/se2/');
-  
-  var rowIndex2 = 1;
-  databaseRef2.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-	
-   var row = tblUsers2.insertRow(rowIndex2);
-   var id = row.insertCell(0);
-   var aiic = row.insertCell(1);
-   var aiictw = row.insertCell(2);
-   var aiicwa = row.insertCell(3);
-   var aiicp = row.insertCell(4);
-   
-   id.appendChild(document.createTextNode(childKey));
-   aiic.appendChild(document.createTextNode(childData.aiic));
-   aiictw.appendChild(document.createTextNode(childData.aiictw));
-   aiicwa.appendChild(document.createTextNode(childData.aiicwa));
-   aiicp.appendChild(document.createTextNode(childData.aiicp));
-   
-   rowIndex2 = rowIndex2 + 1;
-    });
-  });
   
 </script>
 </body>
