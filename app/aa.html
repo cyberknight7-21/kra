@@ -393,7 +393,7 @@
     </script>
     <style>
 body {
-  background-image: url(https://cyberknight7-21.github.io/test2/bg.gif);
+  
 }
 .center {
   margin: 100px;
@@ -409,39 +409,142 @@ body {
   padding: 10px;
 }
 
-h1 {
-  
-color: white;
- text-align: center;
-  letter-spacing: 3px;
-   text-shadow: 3px 3px 7px white;
-    padding-top: 0px;
-	line-height: 80%;
-    
-}
+
 h2 {
   
 color: white;
  text-align: center;
   letter-spacing: 3px;
-   text-shadow: 3px 3px 7px white;
+   
+    padding-top: 5px;
+	line-height: 120%;
+   font-size: 20px;
+}
+
+h1 {
+  
+color: white;
+ text-align: center;
+  letter-spacing: 3px;
+   
+    padding-top: 5px;
+	line-height: 120%;
+   font-size: 20px;
+}
+
+
+
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(https://cyberknight7-21.github.io/kra/bg.gif);
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 0;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      var(--primary-color),
+      transparent
+    );
+    transform: translateX(-100%);
+    transition: 0.6s;
+  }
+
+  &:hover {
+    background: transparent;
+    box-shadow: 0 0 20px 10px hsla(204, 70%, 53%, 0.5);
+
+    &::before {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.form-input-material {
+  --input-default-border-color: white;
+  --input-border-bottom-color: white;
+  
+  input {
+    color: white;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+    0 1px 1px rgba(128, 128, 128, 0.155),
+    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+    0 12px 12px rgba(128, 128, 128, 0.35);
+
+  h1 {
+    margin: 0 0 24px 0;
+    color: white;
+ text-align: center;
+  letter-spacing: 3px;
+   
     padding-top: 0px;
 	line-height: 80%;
-   font-size: 15px;
+   
+  }
+
+  .form-input-material {
+    margin: 12px 0;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 18px 0 9px 0;
+  }
 }
+
 </style>
   </head>
   <body>
   
   
-  <h1>Login For K.R.A. Data Updateing</h1>
+  
   <div id="loginDisplay" class="center" >
-   <h2> <label>User Name</label><h2>
-    <input type="text" id="username" /><br><br><br>
-    <label>Password</label><br><br>
-    <input type="password" id="password" /><br><br><br>
-    <input type="button" value="Login" onclick="LoginUser()" /><br><br>
-    <span id="errorMessage" style="color: red" ></span></div>
+  
+  
+  
+  
+  <form class="login-form" action="javascript:void(0);">
+  <h1>Login</h1>
+  <div class="form-input-material">
+    <input type="text" name="username" id="username" placeholder=" " autocomplete="off" class="form-control-material" required />
+    <label for="username">Username</label>
+  </div><br><br>
+  <div class="form-input-material">
+    <input type="password" name="password" id="password" placeholder=" " autocomplete="off" class="form-control-material" required />
+    <label for="password">Password</label>
+  </div><br><br>
+  <button type="submit" class="btn btn-primary btn-ghost"  value="Login" onclick="LoginUser()" >Login</button>
+  <span id="errorMessage" style="color: red" ></span>
+</form></div>
+   
   
   <hr>
   
@@ -455,13 +558,9 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnueBox5LmPb6xNnOdAjns0LvtjiriGohh9MG5v8TMMuzVV1bXC0RzHz2JvsiPsWBBvE
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
-     
-     
-     
+ 
      
   </div>
   
@@ -480,13 +579,8 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnucrdH_UnkhOzeO1FvE-zy9Z5cY-XLDYBy9EmPF6-ylNCYU5BFkIuFgUd3JmCII5l-w
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
-     
-     
-     
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
+   
      
   </div>
   
@@ -506,13 +600,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnufsoIqrJuYu9o9UTGhuKD9-BA1X211iNnQ_ujudlc3Zjqoj1Q7JSTOZXItTzSpRBC0
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-         
+     
   </div>
   
     
@@ -531,12 +622,9 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnudxp-9Y0RE0CHXxwljskVnIYv5euGr5Y5LK9a9XJn63-L4c5NWpc9bLIDik2dHYO8w
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
-     
-     
+    
      
   </div>
   
@@ -556,12 +644,8 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnue8hD0xKImsJ-1yDVNqpTsSo367fidwWB9HawkNWvIhBnQ_Esw_wQuxZt2apu1vMsg
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
-     
-     
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
+    
      
   </div>
   
@@ -581,13 +665,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnufPc7ESijnFgHVrYo1kJs9R77mlyRTP0oUnlJzJnEBBjkBIc9Ty3mmY-Dl6kvMRcQQ
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+    
      
-     
-      
   </div>
   
     
@@ -606,10 +687,7 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnudG02JGgeiJI1k63-BbXxnEHg4Ia1kfiQI6hmGY0F8SeKKljTy5b7d1r5Crlz7jvXg
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
      
@@ -631,13 +709,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnuewq8uDk2QGVT7mp9zchQgGrw7g2NUO6Qoh8sZ3bRI8iT43wWz_D5MVwnp-DlKoYgY
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+    
      
-     
-        
   </div>
   
     
@@ -656,13 +731,11 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnuccREZoPYY1j9Z5EEeOLRLZwkDlULmM-Q0SFEKQDawr0Kn8aUGsKbRAfA65cM0LL8U
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-     >
+     
+     </div>
   
     
   
@@ -680,13 +753,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnucsDiXEJ6PtKM84FTlFRoJRsenPMg-s8lToJpJvLRh3rN3nj0yOpoS54X_4Q7aBb8A
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-       
+     
   </div>
   
     
@@ -705,13 +775,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnue-__r-C8FrMWexK4vOKVzW7SYrjGFQZvoFF7T6Kk9uwBCyqOVGvmf58Pl-JRCk2r0
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-       
+     
   </div>
   
     
@@ -730,11 +797,9 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnueReQvlpsdHgf7hFHk5Fw4CjLlB0HxXn2mJlU1ah4EpmqLDDoQHdJkKAlZ7U8Qrvrc
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
-     
+    
      
           
   </div>
@@ -755,13 +820,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnucspc7913HX30nbav8flDSWROWw1b7BD0TdEyZRjX0owlsuzDa-CcTZLO862gyyDzs
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-        
+     
   </div>
   
     
@@ -780,13 +842,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnue5cUG00hRN-rDbQpqBFHsHnVmRnAxklEnQMq4d4nFBHTD9GUBY1bSirb_wdjukVUk
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+    
      
-     
-        
   </div>
   
     
@@ -804,13 +863,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnufHj2E-1Lg3IaFJC2Ix4BQCUDu6b6M1WhnIT5n_lKHReFiYwQc7HYnDMt9kn805Z9A
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-         
+        
   </div>
   
     
@@ -829,13 +885,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnuecQZGy1Ukgn_T51cO6oD4QqxhujzLVLInhrGDdcdDR_xmqD8fPjHE-39pXsEpU_1U
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+    
      
-     
-         
   </div>
   
     
@@ -854,13 +907,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnufZ9iW6_tAwI2U_9PBnUNOkqSHT5StrXv6ubSdARQV6_1SO1apfCCNnvS96LigmZJM
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-         
+     
   </div>
   
     
@@ -879,13 +929,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnufCeYWAhWnM8oN0QeNcBe40iLoXWzXNH2DKo6OD1CiQhKEzPVrhBCMvD-pJFIHCFH4
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+    
      
-     
-        
   </div>
   
     
@@ -904,13 +951,9 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnueEzDbj92ZL8SxPaitcUe816mZL0tmyM950veXp1jgzGgwaJBdgzrsWuU7nitZMSWI
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
+    
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
-     
-     
-         
   </div>
   
     
@@ -929,13 +972,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnudFH6T6LPmmLMIbE2mpdAE8QP5xx4pTFzZZIem7hDLfygJ9aVbeeIsA71b6Z9rw63A
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+    
      
-     
-         
   </div>
   
     
@@ -953,13 +993,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnuc6cUqbmizNW0qIDKDaNL-ItUnWW_ql0v1fmiQAI5SexjfNsuOqFSKv-hWJ0B1C0eI
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-       
+     
   </div>
   
     
@@ -977,13 +1014,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnuc-DsCCWhXqgML-DJGVS8C5G4odyTgKnMWobN__3AbiMXwowpe4tu9BPLFoJ0516PM
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-        
+     
   </div>
   
     
@@ -1001,13 +1035,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnueEzDbj92ZL8SxPaitcUe816mZL0tmyM950veXp1jgzGgwaJBdgzrsWuU7nitZMSWI
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-          
+     
   </div>
   
     
@@ -1025,13 +1056,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnudT-WHwWwlLJL2h3kLkt6Lv_-jpONYpD7IH2X4iaWs-qxdSo1-V3dfiS3IKfuAZreo
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+    
      
-     
-         
   </div>
   
     
@@ -1049,13 +1077,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnucN3p4jvX7BD1R3QqfheoWmDlJYfM-CFPRjADvo0eukMsuG9teb3Bv83PswAWrumz4
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-         
+     
   </div>
   
     
@@ -1073,13 +1098,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnuc9NUvhyQZ0tNASN6f1mWAfIXcW3auE-wirmOfyb2ajBA3FGJvgRNcnx-MsCoTMhcM
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-         
+     
   </div>
   
     
@@ -1098,13 +1120,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnueiVfrRLZzNd1sB6DpKo-Abc75EUCRcCQ4jsqGluzjCg07R3u_Ohtt-jNNmOZZ7toE
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+    
      
-     
-        
   </div>
   
     
@@ -1122,13 +1141,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnufeyjhnpZ-jbit5nbqZRbgsP3sOCyAUckr6oKNAHAwR6cqvAC6sRhlYMdKyPXiUs0c
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-          
+     
   </div>
   
     
@@ -1147,13 +1163,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnueIjvvf6pPkPuPbw8xLM2_uOGWh6Aqtb-CLxWPefmgkb6lnJZiJs-AHQfW5vxqxlic
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-        
+     
   </div>
   
     
@@ -1172,13 +1185,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnufQ3lKe1lFFAx31nQHzRPExueUy1Dz4gPW0J7a3yLFSXItUOEtp0UlqyVnTziOeek8
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+    
      
-     
-         
   </div>
   
     
@@ -1196,13 +1206,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnufwR2JKoturiDQhZELVWqoDI6O020R_iKdoIP_65VzTTIWnpwNLCUps5di6PWBsUV8
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-         
+     
   </div>
   
    
@@ -1221,13 +1228,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnuc6ok6STe3WciqrwaC7iwoPGo8Oyu0xiaiS9WYpP-BMOKeEalFRoRxsLTFjNy7C-tM
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-         
+     
   </div>
   
    
@@ -1246,13 +1250,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnuckkVFoD-79UZRL21XpA9ytsDnX9OncntJNdSO1vDk8B1ucTS8P73LJen25es1PRaE
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-          
+     
   </div>
   
    
@@ -1261,7 +1262,7 @@ color: white;
   
   
   
-   <div style="display:none"  id="dataDisplay32"  >
+   <div style="display:none"  id="dataDisplay35"  >
    <br>
     
 <br>
@@ -1272,13 +1273,11 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnud7CFutH9XUkcmk16WIi-BTncx8RMr-VX7MYT0D63z9wh-FosNVMJzIw6V9hOMvIVc
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
-     
-     
-         
+    
+    
+      
   </div>
   
    
@@ -1298,13 +1297,11 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnudC1Yy5tNUM5Z8EgvN0f-SjH5HbfWRVZak3Ca3XrfMSEbgRwTttfHJbpyrot8TU-z0
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-        
+     
+     
   </div>
   
    
@@ -1324,13 +1321,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnufNMAhCMZD9dDsHHjwozAIFP5jrJ4ekNH5hiQwfgvi1gm5KQOq8WKeuVrsCOJnQf7c
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-        
+     
   </div>
   
    
@@ -1349,13 +1343,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnucmviXnKyCaa4m5HGyfOhyI6pq5JK4-_wn5uEnVWDWsPM6dOW0vNh4Wig-u9hw1-_c
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-         
+     
   </div>
   
    
@@ -1375,13 +1366,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnuekSkokzt6dZniMafEGNpC1L3s4v9tqtaUEynKWx0BbQjHqyqlNvFBQWlvZevuHYZE
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+    
      
-     
-          
   </div>
   
    
@@ -1401,13 +1389,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnuf2bmz8zfznb1UUSPMpZJmizrQDFwzpUxTHFqy-Ugw8mEkXsVweTB_As-48rd9Af50
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-          
+     
   </div>
   
   
@@ -1425,13 +1410,10 @@ color: white;
      <iframe src="
      https://docs.google.com/forms/d/e/1FAIpQLSfgR4AWzn8OAL9u0J29HYE0TjVnij26ALH1p1cIrgvlsgob4w/viewform?edit2=2_ABaOnufMPNzuWaEhlkxz_LmOAtKlt_IgQvtAfsRFzfpxkezevhGSnZWvzZy-66Emeh0FdMY
      " 
-     width="380" height="2950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-     
-     <h2>Note: to update password, fill username in "Field 1"<br><br><br>
-     And New Password in "Field 2" in below form.</h2>
+     width="380" height="550" frameborder="50" marginheight="0" marginwidth="0">Loading…</iframe>
      
      
-        
+     
   </div>
   
  

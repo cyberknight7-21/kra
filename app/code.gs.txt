@@ -1,0 +1,491 @@
+function doGet(e) {
+  return HtmlService.createHtmlOutputFromFile('aa');
+}
+
+function AddRecord(firstname, lastname, address, city, state, zip) {
+  var url = 'https://docs.google.com/spreadsheets/d/1qdSDtnT2G4qCnbhapJaCuNMfRNjGRA06sx_rkSac3aw/edit#gid=1496878226';
+  //Paste URL of GOOGLE SHEET
+  var ss= SpreadsheetApp.openByUrl(url);
+  var webAppSheet = ss.getSheetByName("DATA");
+  webAppSheet.appendRow([firstname, lastname, address, city, state, zip, new Date()]);
+  
+}
+
+function checkLogin(username, password) {
+  var url = 'https://docs.google.com/spreadsheets/d/1qdSDtnT2G4qCnbhapJaCuNMfRNjGRA06sx_rkSac3aw/edit#gid=1496878226';
+  //Paste URL of GOOGLE SHEET
+  var ss= SpreadsheetApp.openByUrl(url);
+  var webAppSheet = ss.getSheetByName("USERNAMES");
+  var getLastRow =  webAppSheet.getLastRow();
+  var found_record = '';
+   
+  for(var i = 1; i <= getLastRow; i++)
+  {
+   if(webAppSheet.getRange(2, 1).getValue() == username && 
+     webAppSheet.getRange(2, 2).getValue() == password)
+   {
+     found_record = 'TRUE2';
+   }    
+  }
+  
+  
+   {
+   if(webAppSheet.getRange(3, 1).getValue() == username && 
+     webAppSheet.getRange(3, 2).getValue() == password )
+   {
+     found_record = 'TRUE3';
+   }    
+  }
+  
+  
+   
+  
+   {
+   if(webAppSheet.getRange(4, 1).getValue() == username && 
+     webAppSheet.getRange(4, 2).getValue() == password )
+   {
+     found_record = 'TRUE4';
+   }    
+  }
+  
+   
+  
+   {
+   if(webAppSheet.getRange(5, 1).getValue() == username && 
+     webAppSheet.getRange(5, 2).getValue() == password )
+   {
+     found_record = 'TRUE5';
+   }    
+  }
+  
+   
+  
+   {
+   if(webAppSheet.getRange(6, 1).getValue() == username && 
+     webAppSheet.getRange(6, 2).getValue() == password )
+   {
+     found_record = 'TRUE6';
+   }    
+  }
+  
+   
+  
+   {
+   if(webAppSheet.getRange(7, 1).getValue() == username && 
+     webAppSheet.getRange(7, 2).getValue() == password )
+   {
+     found_record = 'TRUE7';
+   }    
+  }
+  
+   
+  
+   {
+   if(webAppSheet.getRange(8, 1).getValue() == username && 
+     webAppSheet.getRange(8, 2).getValue() == password )
+   {
+     found_record = 'TRUE8';
+   }    
+  }
+  
+   
+  
+   {
+   if(webAppSheet.getRange(9, 1).getValue() == username && 
+     webAppSheet.getRange(9, 2).getValue() == password )
+   {
+     found_record = 'TRUE9';
+   }    
+  }
+  
+   
+  
+   {
+   if(webAppSheet.getRange(10, 1).getValue() == username && 
+     webAppSheet.getRange(10, 2).getValue() == password )
+   {
+     found_record = 'TRUE10';
+   }    
+  }
+  
+   
+  
+   {
+   if(webAppSheet.getRange(11, 1).getValue() == username && 
+     webAppSheet.getRange(11, 2).getValue() == password )
+   {
+     found_record = 'TRUE11';
+   }    
+  }
+  
+   
+  
+   {
+   if(webAppSheet.getRange(12, 1).getValue() == username && 
+     webAppSheet.getRange(12, 2).getValue() == password )
+   {
+     found_record = 'TRUE12';
+   }    
+  }
+  
+   
+  
+   {
+   if(webAppSheet.getRange(13, 1).getValue() == username && 
+     webAppSheet.getRange(13, 2).getValue() == password )
+   {
+     found_record = 'TRUE13';
+   }    
+  }
+  
+   
+  
+   {
+   if(webAppSheet.getRange(14, 1).getValue() == username && 
+     webAppSheet.getRange(14, 2).getValue() == password )
+   {
+     found_record = 'TRUE14';
+   }    
+  }
+  
+   
+  
+   {
+   if(webAppSheet.getRange(15, 1).getValue() == username && 
+     webAppSheet.getRange(15, 2).getValue() == password )
+   {
+     found_record = 'TRUE15';
+   }    
+  }
+  
+  
+   
+  
+   {
+   if(webAppSheet.getRange(16, 1).getValue() == username && 
+     webAppSheet.getRange(16, 2).getValue() == password )
+   {
+     found_record = 'TRUE16';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(17, 1).getValue() == username && 
+     webAppSheet.getRange(17, 2).getValue() == password )
+   {
+     found_record = 'TRUE17';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(18, 1).getValue() == username && 
+     webAppSheet.getRange(18, 2).getValue() == password )
+   {
+     found_record = 'TRUE18';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(19, 1).getValue() == username && 
+     webAppSheet.getRange(19, 2).getValue() == password )
+   {
+     found_record = 'TRUE19';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(20, 1).getValue() == username && 
+     webAppSheet.getRange(20, 2).getValue() == password )
+   {
+     found_record = 'TRUE20';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(21, 1).getValue() == username && 
+     webAppSheet.getRange(21, 2).getValue() == password )
+   {
+     found_record = 'TRUE21';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(22, 1).getValue() == username && 
+     webAppSheet.getRange(22, 2).getValue() == password )
+   {
+     found_record = 'TRUE22';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(23, 1).getValue() == username && 
+     webAppSheet.getRange(23, 2).getValue() == password )
+   {
+     found_record = 'TRUE23';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(24, 1).getValue() == username && 
+     webAppSheet.getRange(24, 2).getValue() == password )
+   {
+     found_record = 'TRUE24';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(25, 1).getValue() == username && 
+     webAppSheet.getRange(25, 2).getValue() == password )
+   {
+     found_record = 'TRUE25';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(26, 1).getValue() == username && 
+     webAppSheet.getRange(26, 2).getValue() == password )
+   {
+     found_record = 'TRUE26';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(27, 1).getValue() == username && 
+     webAppSheet.getRange(27, 2).getValue() == password )
+   {
+     found_record = 'TRUE27';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(28, 1).getValue() == username && 
+     webAppSheet.getRange(28, 2).getValue() == password )
+   {
+     found_record = 'TRUE28';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(29, 1).getValue() == username && 
+     webAppSheet.getRange(29, 2).getValue() == password )
+   {
+     found_record = 'TRUE29';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(30, 1).getValue() == username && 
+     webAppSheet.getRange(30, 2).getValue() == password )
+   {
+     found_record = 'TRUE30';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(31, 1).getValue() == username && 
+     webAppSheet.getRange(31, 2).getValue() == password )
+   {
+     found_record = 'TRUE31';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(32, 1).getValue() == username && 
+     webAppSheet.getRange(32, 2).getValue() == password )
+   {
+     found_record = 'TRUE32';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(33, 1).getValue() == username && 
+     webAppSheet.getRange(33, 2).getValue() == password )
+   {
+     found_record = 'TRUE33';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(34, 1).getValue() == username && 
+     webAppSheet.getRange(34, 2).getValue() == password )
+   {
+     found_record = 'TRUE34';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(35, 1).getValue() == username && 
+     webAppSheet.getRange(35, 2).getValue() == password )
+   {
+     found_record = 'TRUE35';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(36, 1).getValue() == username && 
+     webAppSheet.getRange(36, 2).getValue() == password )
+   {
+     found_record = 'TRUE36';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(37, 1).getValue() == username && 
+     webAppSheet.getRange(37, 2).getValue() == password )
+   {
+     found_record = 'TRUE37';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(38, 1).getValue() == username && 
+     webAppSheet.getRange(38, 2).getValue() == password )
+   {
+     found_record = 'TRUE38';
+   }    
+  }
+  
+   
+  
+   
+  
+   {
+   if(webAppSheet.getRange(39, 1).getValue() == username && 
+     webAppSheet.getRange(39, 2).getValue() == password )
+   {
+     found_record = 'TRUE39';
+   }    
+  }
+  
+   
+  
+  
+   
+  
+   {
+   if(webAppSheet.getRange(40, 1).getValue() == username && 
+     webAppSheet.getRange(40, 2).getValue() == password )
+   {
+     found_record = 'TRUE40';
+   }    
+  }
+  
+   
+  
+ 
+     
+  
+  
+   
+  
+   {
+   if(webAppSheet.getRange(41, 1).getValue() == username && 
+     webAppSheet.getRange(41, 2).getValue() == password )
+   {
+     found_record = 'TRUE41';
+   }    
+  }
+  
+   
+  
+ 
+   
+   
+  
+  if(found_record == '')
+  {
+    found_record = 'FALSE'; 
+  }
+  
+  return found_record;
+  
+    
+}
