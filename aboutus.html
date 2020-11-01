@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Cyber Knights</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="css/file-explore.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+</style>
+</head>
+<body>
+<div id="navbar">
+  <a class="active" href="index.html">Home</a>
+  <a href="https://script.google.com/macros/s/AKfycby2cGdiSBkY4_NxbLo50oN4_sZVSViKLqI9b1Naugun6DhMFjfa/exec">Login</a>
+  <a href="https://www.google.com">About Us</a>
+</div>
+
+  
+  
+  
+<br>
+
+
+<div class="container">
+  <h1>Developed by The 
+</h1><br><br>
+  
+<a href="https://www.thecyberknights.com/"><img id="img2" src="logo.jpeg" alt="logo" style="width:100%;"></a>
+
+
+<h6>For any queries, Contact Us At : </h6><br>
+<a href="tel:7768058802"><h6> Call:+91 7768058802 </h6></a><br>
+<a href="mailto:imcyberknight@gmail.com"> <h6>Email:imcyberknight@gmail.com </h6></a><br>
+<a href="https://wa.link/zaf6nj"><h6> Click here to chat with us(whatsapp)</h6></a><br>
+  
+</div>
+<script>
+
+//sticky
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
+    
+</script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+<script src="js/file-explore.js"></script> 
+<script>
+$(document).ready(function() {
+            $(".file-tree").filetree();
+
+	        });
+</script>
+</body>
+</html>
